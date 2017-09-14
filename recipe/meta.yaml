@@ -40,16 +40,16 @@ requirements:
     - python
     - setuptools
     - r-base
-    - singledispatch  # [not (py>=34)]
+    - singledispatch       # [not (py>=34)]
     - six
-    - readline  # [not win]
+    - readline             # [not win]
   run:
     - python
     - r-base
-    - singledispatch  # [not (py34 or py35)]
+    - singledispatch       # [not (py>=34)]
     - six
-    - readline  # [not win]
-    - {{pfx}}gcc-libs   # [win]
+    - readline             # [not win]
+    - {{pfx}}gcc-libs      # [win]
 
 test:
   requires:
