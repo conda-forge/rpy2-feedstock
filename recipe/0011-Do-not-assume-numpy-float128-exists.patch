@@ -1,0 +1,19 @@
+--- work/rpy/robjects/tests/testNumpyConversions.py.orig	2017-10-14 09:20:47.753036364 +0000
++++ work/rpy/robjects/tests/testNumpyConversions.py	2017-10-14 09:24:37.921854624 +0000
+@@ -130,10 +130,12 @@
+         i64_test = numpy.array(i64_r)[0]
+         self.assertEqual(i64, i64_test)
+ 
+-        f128 = numpy.float128(100.000000003)
+-        f128_r = conversion.py2ri(f128)
+-        f128_test = numpy.array(f128_r)[0]
+-        self.assertEqual(f128, f128_test)
++        # 32-bit numpy does not support float128
++        if hasattr(numpy, 'float128'):
++            f128 = numpy.float128(100.000000003)
++            f128_r = conversion.py2ri(f128)
++            f128_test = numpy.array(f128_r)[0]
++            self.assertEqual(f128, f128_test)
+ 
+     def testObjectArray(self):
+         o = numpy.array([1, "a", 3.2], dtype=numpy.object_)
