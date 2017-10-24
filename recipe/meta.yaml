@@ -23,7 +23,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [win32]
+  # we got a strange error with win64 and need help from someone with access to a windows machine
+  skip: True  # [win]
 
 requirements:
   build:
