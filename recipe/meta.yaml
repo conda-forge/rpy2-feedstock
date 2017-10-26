@@ -36,6 +36,8 @@ requirements:
     - singledispatch  # [not (py>=34)]
     - six
     - readline  # [not win]
+    - gcc       # [not win]
+
   run:
     - python
     - r-base
@@ -43,6 +45,7 @@ requirements:
     - six
     - readline  # [not win]
     - m2w64-gcc-libs  # [win]
+    - libgcc          # [not win]
 
 test:
   requires:
