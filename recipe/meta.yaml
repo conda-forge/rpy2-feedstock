@@ -23,7 +23,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [win32]
+  # we got a strange error with win64 and need help from someone with access to a windows machine
+  skip: True  # [win]
 
 requirements:
   build:
@@ -35,6 +36,8 @@ requirements:
     - singledispatch  # [not (py>=34)]
     - six
     - readline  # [not win]
+    - gcc       # [not win]
+
   run:
     - python
     - r-base
@@ -42,6 +45,7 @@ requirements:
     - six
     - readline  # [not win]
     - m2w64-gcc-libs  # [win]
+    - libgcc          # [not win]
 
 test:
   requires:
