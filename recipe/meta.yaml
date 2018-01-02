@@ -40,6 +40,7 @@ requirements:
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
     - {{pfx}}toolchain     # [win]
+  host:
     - python
     - setuptools
     - r-base
