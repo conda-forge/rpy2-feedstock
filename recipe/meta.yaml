@@ -1,5 +1,5 @@
-{% set version = '2.9.0' %}
-{% set versionu = '2_9_0' %}
+{% set version = '2.9.1' %}
+{% set versionu = '2_9_1' %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: rpy2-{{version}}.tar.gz
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: d1e6c109093965f717293b6c3a8d22d9c172c3721b6a8360c84572dcb284112f
+  sha256: cca9ede06c96b1f3b326c1b98e8620b5d17a0679a852d22f77e418d2c013e97a
   # Regenerate the patches using the following command:
   # mercurial_program export -r 3066:3072 -o 000%n-%m.patch -g
   patches:
