@@ -26,6 +26,7 @@ source:
     - 0010-Win32__Elide-include-R_ext_eventloop_h.patch
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: True  # [py2k]
 
