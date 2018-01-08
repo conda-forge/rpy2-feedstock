@@ -30,6 +30,7 @@ source:
     - 0111-c090410d52149121083ce87387c93ea91514c39f.patch
 
 build:
+  merge_build_host: True  # [win]
   number: 2
   skip: True  # [not py2k]
 
