@@ -43,6 +43,7 @@ requirements:
     - r-base
     - singledispatch       # [not (py>=34)]
     - six
+    - jinja2
     - readline             # [not win]
   run:
     - python
