@@ -9,8 +9,6 @@ osx_image: xcode6.4
 env:
   matrix:
     
-    - CONDA_PY=27  CONDA_R=3.3.2
-    - CONDA_PY=27  CONDA_R=3.4.1
     - CONDA_PY=35  CONDA_R=3.3.2
     - CONDA_PY=35  CONDA_R=3.4.1
     - CONDA_PY=36  CONDA_R=3.3.2
