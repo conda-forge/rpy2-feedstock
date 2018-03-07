@@ -1,4 +1,4 @@
-{% set version = '2.9.1' %}
+{% set version = '2.9.2' %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: cca9ede06c96b1f3b326c1b98e8620b5d17a0679a852d22f77e418d2c013e97a
+  sha256: 5510f6f2f934b3e659ab24b22d9473f6e999a22ee20c542f33cc88d49c63ceed
   patches:
     # patches to be upstreamed:
     - 0001-ResetConsole_is_not_a_member_of_structRstart.patch
@@ -47,7 +47,7 @@ requirements:
     - six
     - jinja2
     - readline 7.0  # [not win]
-    - m2w64-gcc-libs  # [win]
+    - {{ pfx }}gcc-libs  # [win]
     - libgcc          # [not win]
 
 test:
