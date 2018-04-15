@@ -48,6 +48,7 @@ requirements:
     - readline 7.0  # [not win]
     - {{ pfx }}gcc-libs  # [win]
     - libgcc          # [not win]
+    - tzlocal
 
 test:
   requires:
