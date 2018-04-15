@@ -1,4 +1,4 @@
-{% set version = '2.9.2' %}
+{% set version = "2.9.3" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 5510f6f2f934b3e659ab24b22d9473f6e999a22ee20c542f33cc88d49c63ceed
+  sha256: 1b72958e683339ea0c3bd9f73738e9ece2da8da8008a10e2e0c68fc7864e9361
   patches:
     # patches to be upstreamed:
     - 0001-ResetConsole_is_not_a_member_of_structRstart.patch
@@ -20,7 +20,6 @@ source:
     - 0008-Win32__Change_R_USER_check_for_HOMEDIR_to_HOMEDRIVE.patch
     - 0009-Win32__Use_get_R_HOME___if_R_HOME_is_not_set_.patch
     - 0010-Win32__Elide-include-R_ext_eventloop_h.patch
-    - tzone.patch
 
 build:
   number: 0
@@ -49,6 +48,7 @@ requirements:
     - readline 7.0  # [not win]
     - {{ pfx }}gcc-libs  # [win]
     - libgcc          # [not win]
+    - tzlocal
 
 test:
   requires:
