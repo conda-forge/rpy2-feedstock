@@ -33,6 +33,7 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
   host:
     - python
+    - numpy
     - pip
     - r-base
     - singledispatch  # [not (py>=34)]
@@ -41,6 +42,7 @@ requirements:
     - readline      # [not win]
   run:
     - python
+    - numpy
     - r-base
     - r-rsqlite
     - r-dbplyr
