@@ -22,32 +22,34 @@ source:
     - 0010-Win32__Elide-include-R_ext_eventloop_h.patch
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: True  # [win32 or py2k]
 
 requirements:
   build:
+    - posix  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - python
+    - numpy
     - pip
     - r-base
     - singledispatch  # [not (py>=34)]
     - six
     - jinja2
-    - readline 7.0  # [not win]
-    - posix  # [win]
-    - m2w64-toolchain  # [win]
-    - gcc       # [not win]
+    - readline      # [not win]
   run:
     - python
+    - numpy
     - r-base
     - r-rsqlite
     - r-dbplyr
     - singledispatch  # [not (py>=34)]
     - six
     - jinja2
-    - readline 7.0  # [not win]
-    - {{ pfx }}gcc-libs  # [win]
-    - libgcc          # [not win]
+    - readline      # [not win]
     - tzlocal
 
 test:
