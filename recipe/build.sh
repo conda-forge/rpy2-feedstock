@@ -8,4 +8,7 @@ if [ "$(uname)" == "Darwin" ]; then
     export LINKFLAGS="${LDFLAGS}"
 fi
 
+export LDFLAGS=""
+export LINKFLAGS=""
+
 CFLAGS="-I${PREFIX}/include ${CFLAGS}" "${PYTHON}" -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
