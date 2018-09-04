@@ -59,7 +59,7 @@ requirements:
 test:
   requires:
     - r-survival
-    - r-ggplot2 2.2.1
+    - r-ggplot2
     - r-dplyr
     - ipython
     - numpy
