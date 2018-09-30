@@ -8,16 +8,20 @@ dlltool -d python%CONDA_PY%.def -l %CONDA_DEFAULT_ENV%\libs\libpython%CONDA_PY%.
 
 :: Create an empty library for msvcrt??? since CygwinCCompiler seems to
 :: think that linking to that is a good idea (it is not).
-if "%CONDA_PY%" == "36" (
+if "%CONDA_PY%" == "37" (
   ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
-) else (
-  if "%CONDA_PY%" == "35" (
+else (
+  if "%CONDA_PY%" == "36" (
     ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
   ) else (
-    if "%CONDA_PY%" == "34" (
-      ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr120.dll.a
+    if "%CONDA_PY%" == "35" (
+      ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
     ) else (
-      ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr90.dll.a
+      if "%CONDA_PY%" == "34" (
+        ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr120.dll.a
+      ) else (
+        ar cru %CONDA_DEFAULT_ENV%\libs\libmsvcr90.dll.a
+      )
     )
   )
 )
@@ -30,16 +34,20 @@ if errorlevel 1 exit 1
 
 :: Cleanup the libs we made:
 del %CONDA_DEFAULT_ENV%\libs\libpython%CONDA_PY%.dll.a
-if "%CONDA_PY%" == "36" (
+if "%CONDA_PY%" == "37" (
   del %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
 ) else (
-  if "%CONDA_PY%" == "35" (
+  if "%CONDA_PY%" == "36" (
     del %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
   ) else (
-    if "%CONDA_PY%" == "34" (
-      del %CONDA_DEFAULT_ENV%\libs\libmsvcr120.dll.a
+    if "%CONDA_PY%" == "35" (
+      del %CONDA_DEFAULT_ENV%\libs\libmsvcr140.dll.a
     ) else (
-      del %CONDA_DEFAULT_ENV%\libs\libmsvcr90.dll.a
+      if "%CONDA_PY%" == "34" (
+        del %CONDA_DEFAULT_ENV%\libs\libmsvcr120.dll.a
+      ) else (
+        del %CONDA_DEFAULT_ENV%\libs\libmsvcr90.dll.a
+      )
     )
   )
 )
