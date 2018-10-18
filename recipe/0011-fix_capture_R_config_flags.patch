@@ -1,0 +1,15 @@
+Remove the argparse default option `-h/--help`, otherwise setup fails when
+`R CMD config --ldflags/--cppflags` contains a flag starting with `-h`.
+
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -271,7 +271,7 @@
+     #lapacklibs = rexec.cmd_config('LAPACK_LIBS', True)
+     #blaslibs = rexec.cmd_config('BLAS_LIBS', True)
+
+-    parser = argparse.ArgumentParser()
++    parser = argparse.ArgumentParser(add_help=False)
+     parser.add_argument('-I', action='append')
+     parser.add_argument('-L', action='append')
+     parser.add_argument('-l', action='append')
