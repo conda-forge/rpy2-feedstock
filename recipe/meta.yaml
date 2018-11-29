@@ -1,5 +1,5 @@
-{% set version = '2.9.1' %}
-{% set versionu = '2_9_1' %}
+{% set version = '2.9.4' %}
+{% set versionu = '2_9_4' %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: rpy2-{{version}}.tar.gz
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: cca9ede06c96b1f3b326c1b98e8620b5d17a0679a852d22f77e418d2c013e97a
+  sha256: be57f741d0c284b5d8785ab03dff0e829303e5ac30e548d5ceb46e05b168812e
   # Regenerate the patches using the following command:
   # mercurial_program export -r 3066:3072 -o 000%n-%m.patch -g
   patches:
@@ -33,11 +33,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
+    - {{ compiler('fortran') }}  # [not win]
     # Note, until the build env. is activated properly, you'll need posix in your
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
     - {{pfx}}toolchain     # [win]
   host:
+    - {{ compiler('c') }}  # [not win]
+    - git
     - python
     - setuptools
     - r-base
@@ -45,7 +48,9 @@ requirements:
     - six
     - jinja2
     - readline             # [not win]
+    - bzip2                # [linux]
   run:
+    - {{ compiler('c') }}  # [not win]
     - python
     - r-base
     - r-rsqlite
@@ -59,12 +64,13 @@ requirements:
 test:
   requires:
     - r-survival
-    - r-ggplot2
+    - r-ggplot2 >=3.0.0
     - r-dplyr
     - ipython
     - numpy
     - pandas
     - mock
+    - tzlocal
   imports:
     - rpy2
     - rpy2.interactive
@@ -80,13 +86,14 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
   commands:
-    # Cannot test on unix because of:
-    # https://bitbucket.org/rpy2/rpy2/issues/418/cannot-get-dataframe-with-dates-out-of-r#comment-40400178
-    - python -m rpy2.tests           # [not unix]
+    - python -m rpy2.tests           # [not linux]
+    # The tests run ok, but python segfaults at exit
+    # - xvfb-run python -m rpy2.tests  # [linux]
 
 about:
   home: http://rpy.sourceforge.net
-  license: GPL-2.0
+  license: GPL2
+  license_family: GPL2
   summary: 'Python interface to the R language (embedded R)'
 
 extra:
