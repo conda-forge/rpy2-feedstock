@@ -34,7 +34,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('fortran') }}  # [linux]
     # Note, until the build env. is activated properly, you'll need posix in your
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
