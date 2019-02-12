@@ -50,6 +50,7 @@ requirements:
     - jinja2
     - readline      # [not win]
     - tzlocal
+    - simplegeneric
 
 test:
   requires:
