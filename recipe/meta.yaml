@@ -7,7 +7,9 @@ package:
   version: {{version}}
 
 source:
-  url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
+  url: 
+    - https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
+    - https://files.pythonhosted.org/packages/f1/98/c7652cc9d7fc0afce74d2c30a52b9c9ac391713a63d037e4ab8feb56c530/rpy2-2.9.4.tar.gz
   sha256: be57f741d0c284b5d8785ab03dff0e829303e5ac30e548d5ceb46e05b168812e
   # Regenerate the patches using the following command:
   # mercurial_program export -r 3066:3072 -o 000%n-%m.patch -g
