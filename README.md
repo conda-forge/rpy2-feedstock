@@ -18,9 +18,6 @@ Summary: Python interface to the R language (embedded R)
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/rpy2-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/rpy2-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/rpy2-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/rpy2-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/rpy2-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/rpy2-feedstock/branch/master)
 
 Current release info
 ====================
