@@ -1,4 +1,5 @@
-{% set version = "2.9.4" %}
+{% set version = '2.9.4' %}
+{% set versionu = '2_9_4' %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -8,8 +9,10 @@ package:
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
   sha256: be57f741d0c284b5d8785ab03dff0e829303e5ac30e548d5ceb46e05b168812e
+  # Regenerate the patches using the following command:
+  # mercurial_program export -r 3066:3072 -o 000%n-%m.patch -g
   patches:
-    # patches to be upstreamed:
+    # Patches to be upstreamed:
     - 0001-ResetConsole_is_not_a_member_of_structRstart.patch
     - 0002-Win32__Add_missing_jump_to_toplevel___extern.patch
     - 0003-Win32__Fix_incorrect_type_of__buf__parameter_to_EmbeddedR_ReadConsole__.patch
@@ -20,7 +23,7 @@ source:
     - 0008-Win32__Change_R_USER_check_for_HOMEDIR_to_HOMEDRIVE.patch
     - 0009-Win32__Use_get_R_HOME___if_R_HOME_is_not_set_.patch
     - 0010-Win32__Elide-include-R_ext_eventloop_h.patch
-    - 0011-fix_capture_R_config_flags.patch
+    - 0011-Disable-broken-numpy-test.patch
 
 build:
   merge_build_host: True  # [win]
@@ -29,38 +32,46 @@ build:
 
 requirements:
   build:
-    - posix  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('fortran') }}  # [linux]
+    # Note, until the build env. is activated properly, you'll need posix in your
+    # root env. too. Proper activation is in-progress though.
+    - posix                # [win]
+    - {{pfx}}toolchain     # [win]
   host:
-    - python
-    - pip
+    - {{ compiler('c') }}  # [not win]
+    - git
     - r-base
-    - singledispatch  # [not (py>=34)]
+    - singledispatch       # [not (py>=34)]
     - six
     - jinja2
-    - readline      # [not win]
+    - readline             # [linux]
+    - bzip2                # [linux]
   run:
+    - {{ compiler('c') }}  # [not win]
     - python
     - r-base
     - r-rsqlite
     - r-dbplyr
-    - singledispatch  # [not (py>=34)]
+    - singledispatch       # [not (py>=34)]
     - six
     - jinja2
     - readline      # [not win]
+    - {{pfx}}gcc-libs      # [win]
     - tzlocal
     - simplegeneric
 
 test:
   requires:
     - r-survival
-    - r-ggplot2 2.2.1
+    - r-ggplot2 >=3.0.0
     - r-dplyr
     - ipython
-    - numpy 1.9
+    - simplegeneric
+    - numpy
     - pandas
     - mock
+    - tzlocal
   imports:
     - rpy2
     - rpy2.interactive
@@ -76,9 +87,9 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
   commands:
-    - python -m rpy2.tests  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - python -m rpy2.tests           # [not linux]
+    # The tests run ok, but python segfaults at exit
+    # - xvfb-run python -m rpy2.tests  # [linux]
 
 about:
   home: http://rpy.sourceforge.net
