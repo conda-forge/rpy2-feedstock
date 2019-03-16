@@ -43,7 +43,7 @@ requirements:
     - git
     - python
     - pip
-    - r_base
+    - r-base
     - singledispatch       # [not (py>=34)]
     - six
     - jinja2
@@ -52,7 +52,7 @@ requirements:
   run:
     - {{ compiler('c') }}  # [not win]
     - python
-    - r_base
+    - r-base
     - r-rsqlite
     - r-dbplyr
     - singledispatch       # [not (py>=34)]
