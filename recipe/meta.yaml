@@ -1,5 +1,6 @@
 {% set version = '2.8.6' %}
 {% set versionu = '2_8_6' %}
+{% set posix = 'm2-' if win else '' %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -41,6 +42,9 @@ requirements:
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
     - {{pfx}}toolchain     # [win]
+    - {{posix}}patch
+    - {{posix}}git
+
   host:
     - python
     - setuptools
