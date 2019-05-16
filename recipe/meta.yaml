@@ -1,83 +1,52 @@
 {% set version = "3.0.4" %}
-{% set pfx = 'm2w64-' if win else '' %}
+{% set ver = version|replace(".", "_") %}
 
 package:
   name: rpy2
   version: {{version}}
 
 source:
-  url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 2af5158a5d56af7f7bf5e54d8d7e87b6f115ff40f056d82f93cad0cbf6acc0cb
-  patches:
-    # patches to be upstreamed:
-    - 0001-ResetConsole_is_not_a_member_of_structRstart.patch
-    - 0002-Win32__Add_missing_jump_to_toplevel___extern.patch
-    - 0003-Win32__Fix_incorrect_type_of__buf__parameter_to_EmbeddedR_ReadConsole__.patch
-    - 0004-Win32__Add_missing__include__stdlib_h_.patch
-    - 0005-Win32__Hack_sysconfig_so_that__CC__is_set_to__gcc_.patch
-    - 0006-Win32__Add___MINGW_USE_ANSI_STDIO_1_and__Wno-format_for___zd__in__rinterface_c.patch
-    - 0007-Turn_off_some_pedantic_warnings__unused_variables_and_functions_.patch
-    - 0008-Win32__Change_R_USER_check_for_HOMEDIR_to_HOMEDRIVE.patch
-    - 0009-Win32__Use_get_R_HOME___if_R_HOME_is_not_set_.patch
-    - 0010-Win32__Elide-include-R_ext_eventloop_h.patch
-    - 0011-fix_capture_R_config_flags.patch
+  url: https://bitbucket.org/rpy2/rpy2/get/RELEASE_{{ ver }}.tar.gz
+  sha256: fc649bd25d06febd3db382ac3e77b4945fa9b8843a664b86d7c27c06fc912f19
 
 build:
-  merge_build_host: True  # [win]
   number: 0
-  skip: True  # [py2k]
+  merge_build_host: True  # [win]
 
 requirements:
   build:
     - posix  # [win]
-    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('c') }}  # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
   host:
     - python
     - pip
-    - r-base
-    - singledispatch  # [not (py>=34)]
-    - six
-    - jinja2
-    - readline      # [not win]
+    - cffi >=1.0.0
   run:
-    - python
     - r-base
-    - r-rsqlite
-    - r-dbplyr
-    - singledispatch  # [not (py>=34)]
-    - six
+    - python
     - jinja2
-    - readline      # [not win]
     - tzlocal
+    - cffi >=1.0.0
 
 test:
+  source_files:
+    - tests
   requires:
     - r-survival
-    - r-ggplot2 2.2.1
-    - r-dplyr
     - ipython
-    - numpy 1.9
     - pandas
-    - mock
+    - pytest
   imports:
     - rpy2
-    - rpy2.interactive
-    - rpy2.interactive.tests
+    # - rpy2.interactive
     - rpy2.ipython
-    - rpy2.ipython.tests
     - rpy2.rinterface
-    - rpy2.rinterface.tests
     - rpy2.rlike
-    - rpy2.rlike.tests
     - rpy2.robjects
     - rpy2.robjects.lib
-    - rpy2.robjects.lib.tests
-    - rpy2.robjects.tests
   commands:
-    - python -m rpy2.tests  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - pytest tests
 
 about:
   home: http://rpy.sourceforge.net
