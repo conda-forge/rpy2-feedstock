@@ -40,6 +40,7 @@ requirements:
     - six
     - jinja2
     - readline      # [not win]
+    - simplegeneric
   run:
     - python
     - r-base
@@ -50,6 +51,7 @@ requirements:
     - jinja2
     - readline      # [not win]
     - tzlocal
+    - simplegeneric
 
 test:
   requires:
