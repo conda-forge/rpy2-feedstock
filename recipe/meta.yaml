@@ -59,7 +59,7 @@ test:
     - r-ggplot2 2.2.1
     - r-dplyr
     - ipython
-    - numpy 1.9
+    - numpy
     - pandas
     - mock
   imports:
@@ -78,8 +78,6 @@ test:
     - rpy2.robjects.tests
   commands:
     - python -m rpy2.tests  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://rpy.sourceforge.net
