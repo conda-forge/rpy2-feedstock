@@ -77,8 +77,10 @@ test:
     - rpy2.robjects.lib.tests
     - rpy2.robjects.tests
   commands:
+    - "python -m rpy2.tests > test_run.txt 2>&1 || true"  # [not win]
+    - cat test_run.txt                                    # [not win]
     # Expect 4 failures due to https://github.com/numpy/numpy/issues/11150
-    - python -m rpy2.tests | grep "errors=4"  # [not win]
+    - cat test_run.txt | grep "errors=4"                  # [not win]
 
 about:
   home: http://rpy.sourceforge.net
