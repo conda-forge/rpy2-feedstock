@@ -78,7 +78,7 @@ test:
     - rpy2.robjects.tests
   commands:
     # Expect 4 failures due to https://github.com/numpy/numpy/issues/11150
-    - python -m rpy2.tests || grep "errors=4"  # [not win]
+    - python -m rpy2.tests | grep "errors=4"  # [not win]
 
 about:
   home: http://rpy.sourceforge.net
