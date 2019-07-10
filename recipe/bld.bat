@@ -1,3 +1,7 @@
+set RHOME=%LIBRARY_LIB%\lib\R\bin
+set R_HOME=%LIBRARY_LIB%\lib\R\bin
+REM set R_USER: C:\Users\username\Documents
+
 :: Mixing MS CRT headers and mingw-w64 headers doesn't work
 :: so build the whole thing with mingw-w64 instead.
 echo [build]              > setup.cfg
