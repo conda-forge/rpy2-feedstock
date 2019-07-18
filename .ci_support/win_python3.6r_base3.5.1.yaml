@@ -4,12 +4,15 @@ channel_targets:
 - conda-forge main
 m2w64_c_compiler:
 - m2w64-toolchain
+numpy:
+- '1.14'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
   r-base:
-    max_pin: x.x.x
+    min_pin: x.x
+    max_pin: x.x
 python:
 - '3.6'
 r_base:
