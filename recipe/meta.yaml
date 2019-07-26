@@ -24,7 +24,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 2
+  number: 3
   skip: True  # [py2k]
 
 requirements:
@@ -56,7 +56,7 @@ requirements:
 test:
   requires:
     - r-survival
-    - r-ggplot2 2.2.1
+    - r-ggplot2 >=2.2.1
     - r-dplyr
     - ipython
     - numpy
