@@ -1,4 +1,4 @@
-{% set version = "2.9.4" %}
+{% set version = "3.1.0" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: be57f741d0c284b5d8785ab03dff0e829303e5ac30e548d5ceb46e05b168812e
+  sha256: ed4284df32d00b1fba5b1409e5df64b04b02d47aff543d6ef1dc211ab94e247f
   patches:
     # patches to be upstreamed:
     - 0001-ResetConsole_is_not_a_member_of_structRstart.patch
@@ -24,7 +24,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 3
+  number: 0
   skip: True  # [py2k]
 
 requirements:
