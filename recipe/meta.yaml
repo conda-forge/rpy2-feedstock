@@ -49,11 +49,12 @@ test:
     - pytest
   imports:
     - rpy2
-    - rpy2.ipython
-    - rpy2.rinterface
     - rpy2.rlike
-    - rpy2.robjects
-    - rpy2.robjects.lib
+    # calls `get_rlib_path` an that only works for *nix
+    - rpy2.ipython  # [not win]
+    - rpy2.rinterface  # [not win]
+    - rpy2.robjects  # [not win]
+    - rpy2.robjects.lib  # [not win]
   commands:
     - pytest -s -rxs -v rpy/tests  # [not win]
 
