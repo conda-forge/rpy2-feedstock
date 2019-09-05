@@ -21,7 +21,7 @@ if "%CONDA_PY%" == "27" (
 gendef %PREFIX%\python%CONDA_PY%.dll - > python%CONDA_PY%.def
 dlltool -d python%CONDA_PY%.def -l %PREFIX%\lib\libpython%CONDA_PY%.dll.a
 
-"%PYTHON%" setup.py install
+"%PYTHON%" -m pip install . --no-deps -vv
 if errorlevel 1 exit 1
 
 :: Cleanup the libs we made:

@@ -1,7 +1,7 @@
 About rpy2
 ==========
 
-Home: http://rpy.sourceforge.net
+Home: https://rpy2.bitbucket.io/
 
 Package license: GPL-2.0
 
