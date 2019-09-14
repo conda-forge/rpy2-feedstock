@@ -83,8 +83,8 @@ test:
     - rpy2.robjects.lib       # [not win]
     - rpy2.robjects.lib.tests  # [not win]
     - rpy2.robjects.tests     # [not win]
-  commands:
-    - python -m rpy2.tests    # [not win]
+  #commands:
+  #  - python -m rpy2.tests    # [not win]
 
 about:
   home: http://rpy.sourceforge.net
