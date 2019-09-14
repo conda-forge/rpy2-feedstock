@@ -13,11 +13,11 @@ jobs:
       win_python2.7r_base3.5.1:
         CONFIG: win_python2.7r_base3.5.1
         CONDA_BLD_PATH: D:\\bld\\
-        UPLOAD_PACKAGES: False
+        UPLOAD_PACKAGES: True
       win_python2.7r_base3.6:
         CONFIG: win_python2.7r_base3.6
         CONDA_BLD_PATH: D:\\bld\\
-        UPLOAD_PACKAGES: False
+        UPLOAD_PACKAGES: True
   steps:
     # TODO: Fast finish on azure pipelines?
     - script: |

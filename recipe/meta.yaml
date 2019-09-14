@@ -41,7 +41,7 @@ requirements:
     # Note, until the build env. is activated properly, you'll need posix in your
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
-    - {{pfx}}toolchain     # [win]
+    - {{ compiler('m2w64_c') }}     # [win]
     - {{posix}}patch
     - {{posix}}git
 
@@ -83,12 +83,13 @@ test:
     - rpy2.robjects.lib       # [not win]
     - rpy2.robjects.lib.tests  # [not win]
     - rpy2.robjects.tests     # [not win]
-  commands:
-    - python -m rpy2.tests    # [not win]
+  #commands:
+  #  - python -m rpy2.tests    # [not win]
 
 about:
   home: http://rpy.sourceforge.net
   license: GPL-2.0
+  license_file: gpl-2.0.txt
   summary: 'Python interface to the R language (embedded R)'
 
 extra:
