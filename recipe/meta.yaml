@@ -41,7 +41,7 @@ requirements:
     # Note, until the build env. is activated properly, you'll need posix in your
     # root env. too. Proper activation is in-progress though.
     - posix                # [win]
-    - {{pfx}}toolchain     # [win]
+    - {{ compiler('m2w64_c') }}     # [win]
     - {{posix}}patch
     - {{posix}}git
 
