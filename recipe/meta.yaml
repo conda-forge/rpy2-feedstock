@@ -89,6 +89,7 @@ test:
 about:
   home: http://rpy.sourceforge.net
   license: GPL-2.0
+  license_file: gpl-2.0.txt
   summary: 'Python interface to the R language (embedded R)'
 
 extra:
