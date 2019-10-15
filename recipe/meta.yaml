@@ -10,7 +10,7 @@ source:
   sha256: ed4284df32d00b1fba5b1409e5df64b04b02d47aff543d6ef1dc211ab94e247f
 
 build:
-  number: 0
+  number: 1
   merge_build_host: True  # [win]
   skip: True  # [py2k]
 
