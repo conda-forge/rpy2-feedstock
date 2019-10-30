@@ -1,4 +1,4 @@
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 18025f53c1a32b7b38ed319c81f8445b9a8809e0ecba210634b67764d68da978
+  sha256: cfba1b5d5ad56f9f52a0df4df8015a342043f113576003967fd760e063023ca6
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - pytz
     - simplegeneric
     - tzlocal
-    - cffi >=1.0.0
+    - cffi >=1.0.0,!=1.13.0
   run:
     - python
     - r-base
@@ -35,7 +35,7 @@ requirements:
     - pytz
     - simplegeneric
     - tzlocal
-    - cffi >=1.0.0
+    - cffi >=1.0.0,!=1.13.0
 
 test:
   source_files:
