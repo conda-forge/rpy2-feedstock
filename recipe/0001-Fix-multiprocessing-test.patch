@@ -1,0 +1,17 @@
+--- rpy/tests/rinterface/test_embedded_r.py
++++ rpy/tests/rinterface/test_embedded_r.py
+@@ -74,8 +74,10 @@
+ 
++def _init_r():
++    from rpy2 import rinterface
++    rinterface.initr()
++
++
+ def test_initr():
+-    def init_r():
+-        from rpy2 import rinterface
+-        rinterface.initr()
+     preserve_hash = True
+-    proc = multiprocessing.Process(target=init_r,
++    proc = multiprocessing.Process(target=_init_r,
+                                    args=(preserve_hash,))
