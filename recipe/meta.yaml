@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.2.4" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: ed4284df32d00b1fba5b1409e5df64b04b02d47aff543d6ef1dc211ab94e247f
+  sha256: 3daf1a4b28c4e354ef989093f03b066908bf6e5082a6f4af72cc3fd928a28dc6
   patches:
     - 0001-Fix-multiprocessing-test.patch
 
 build:
-  number: 3
+  number: 0
   merge_build_host: True  # [win]
   skip: True  # [py2k]
 
