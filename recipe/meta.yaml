@@ -47,7 +47,7 @@ test:
     - r-ggplot2 >=2.2.1
     - ipython
     - numpy
-    - pandas
+    - pandas >=0.25,<1.0.0
     - pytest
   imports:
     - rpy2
