@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.2.5" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: ed4284df32d00b1fba5b1409e5df64b04b02d47aff543d6ef1dc211ab94e247f
+  sha256: 33fbb7c244fe4151a47899ab8f2f138ca0042d25755a3956d584453a8719d35e
   patches:
     - 0001-Fix-multiprocessing-test.patch
 
 build:
-  number: 3
+  number: 0
   merge_build_host: True  # [win]
   skip: True  # [py2k]
 
@@ -41,7 +41,7 @@ requirements:
 
 test:
   source_files:
-    - rpy/tests
+    - rpy2/tests
   requires:
     - r-survival
     - r-ggplot2 >=2.2.1
@@ -58,7 +58,7 @@ test:
     - rpy2.robjects  # [not win]
     - rpy2.robjects.lib  # [not win]
   commands:
-    - pytest -s -rxs -v rpy/tests  # [not win]
+    - pytest -s -rxs -v rpy2/tests  # [not win]
 
 about:
   home: https://rpy2.bitbucket.io/
