@@ -1,7 +1,7 @@
 About rpy2
 ==========
 
-Home: https://rpy2.bitbucket.io/
+Home: https://github.com/rpy2/rpy2
 
 Package license: GPL-2.0
 
