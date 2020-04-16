@@ -10,28 +10,36 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_python3.6r_base3.5.1:
-        CONFIG: linux_python3.6r_base3.5.1
+      linux_numpy1.14python3.6.____cpythonr_base3.5.1:
+        CONFIG: linux_numpy1.14python3.6.____cpythonr_base3.5.1
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.6r_base3.6:
-        CONFIG: linux_python3.6r_base3.6
+      linux_numpy1.14python3.6.____cpythonr_base3.6:
+        CONFIG: linux_numpy1.14python3.6.____cpythonr_base3.6
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.7r_base3.5.1:
-        CONFIG: linux_python3.7r_base3.5.1
+      linux_numpy1.14python3.7.____cpythonr_base3.5.1:
+        CONFIG: linux_numpy1.14python3.7.____cpythonr_base3.5.1
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.7r_base3.6:
-        CONFIG: linux_python3.7r_base3.6
+      linux_numpy1.14python3.7.____cpythonr_base3.6:
+        CONFIG: linux_numpy1.14python3.7.____cpythonr_base3.6
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.8r_base3.5.1:
-        CONFIG: linux_python3.8r_base3.5.1
+      linux_numpy1.14python3.8.____cpythonr_base3.5.1:
+        CONFIG: linux_numpy1.14python3.8.____cpythonr_base3.5.1
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.8r_base3.6:
-        CONFIG: linux_python3.8r_base3.6
+      linux_numpy1.14python3.8.____cpythonr_base3.6:
+        CONFIG: linux_numpy1.14python3.8.____cpythonr_base3.6
+        UPLOAD_PACKAGES: True
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_numpy1.18python3.6.____73_pypyr_base3.5.1:
+        CONFIG: linux_numpy1.18python3.6.____73_pypyr_base3.5.1
+        UPLOAD_PACKAGES: True
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_numpy1.18python3.6.____73_pypyr_base3.6:
+        CONFIG: linux_numpy1.18python3.6.____73_pypyr_base3.6
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
   steps:
