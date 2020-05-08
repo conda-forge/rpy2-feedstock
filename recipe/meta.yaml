@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   merge_build_host: true  # [win]
-  skip: true  # [py2k]
+  skip: true  # [py2k or r_base=="3.5.1"]
 
 requirements:
   build:
