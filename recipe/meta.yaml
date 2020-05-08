@@ -1,4 +1,4 @@
-{% set version = "3.2.5" %}
+{% set version = "3.3.2" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 33fbb7c244fe4151a47899ab8f2f138ca0042d25755a3956d584453a8719d35e
+  sha256: 2e12c99e56a1faa68f3b82a71b90e3389203c1e76cd53fe38946a8a7a31f9750
   patches:
     - 0001-Fix-multiprocessing-test.patch
 
 build:
   number: 1
-  merge_build_host: True  # [win]
-  skip: True  # [py2k]
+  merge_build_host: true  # [win]
+  skip: true  # [py2k or r_base=="3.5.1"]
 
 requirements:
   build:
@@ -58,14 +58,14 @@ test:
     - rpy2.robjects  # [not win]
     - rpy2.robjects.lib  # [not win]
   commands:
-    - pytest -s -rxs -v rpy2/tests  # [not win]
+    - pytest -s -rxs -v rpy2/tests -k "not test_display_args"  # [not win]
 
 about:
   home: https://rpy2.bitbucket.io/
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: gpl-2.0.txt
-  summary: "Python interface to the R language (embedded R)"
+  summary: Python interface to the R language (embedded R)
 
 extra:
   recipe-maintainers:
