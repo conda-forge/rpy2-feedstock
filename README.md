@@ -3,7 +3,7 @@ About rpy2
 
 Home: https://rpy2.bitbucket.io/
 
-Package license: GPL-2.0
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
@@ -29,24 +29,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_python3.6.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=linux&configuration=linux_python3.6.____cpythonr_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_python3.6.____cpythonr_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=linux&configuration=linux_python3.6.____cpythonr_base3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_python3.7.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=linux&configuration=linux_python3.7.____cpythonr_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -57,24 +43,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_python3.8.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=linux&configuration=linux_python3.8.____cpythonr_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_python3.8.____cpythonr_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=linux&configuration=linux_python3.8.____cpythonr_base3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python3.6.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=osx&configuration=osx_python3.6.____cpythonr_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -85,24 +57,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_python3.7.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=osx&configuration=osx_python3.7.____cpythonr_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_python3.7.____cpythonr_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=osx&configuration=osx_python3.7.____cpythonr_base3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python3.8.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=osx&configuration=osx_python3.8.____cpythonr_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -113,13 +71,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python3.6.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=win&configuration=win_python3.6.____cpythonr_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_python3.6.____cpythonr_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
@@ -127,24 +78,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python3.7.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=win&configuration=win_python3.7.____cpythonr_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_python3.7.____cpythonr_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=win&configuration=win_python3.7.____cpythonr_base3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.8.____cpythonr_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4313&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rpy2-feedstock?branchName=master&jobName=win&configuration=win_python3.8.____cpythonr_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>

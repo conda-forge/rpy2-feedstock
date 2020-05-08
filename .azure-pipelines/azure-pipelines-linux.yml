@@ -10,24 +10,12 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_python3.6.____cpythonr_base3.5.1:
-        CONFIG: linux_python3.6.____cpythonr_base3.5.1
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_python3.6.____cpythonr_base3.6:
         CONFIG: linux_python3.6.____cpythonr_base3.6
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.7.____cpythonr_base3.5.1:
-        CONFIG: linux_python3.7.____cpythonr_base3.5.1
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_python3.7.____cpythonr_base3.6:
         CONFIG: linux_python3.7.____cpythonr_base3.6
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_python3.8.____cpythonr_base3.5.1:
-        CONFIG: linux_python3.8.____cpythonr_base3.5.1
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_python3.8.____cpythonr_base3.6:
