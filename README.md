@@ -5,7 +5,7 @@ Home: https://rpy2.bitbucket.io/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python interface to the R language (embedded R)
 
