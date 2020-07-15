@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
   sha256: d2b1fb0e22924b08ba11acf07b93cec1842296c005e142834008bba25b3643af
-  patches:
-    - 0001-Fix-multiprocessing-test.patch
 
 build:
   number: 0
