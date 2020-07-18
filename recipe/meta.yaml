@@ -43,6 +43,7 @@ test:
   requires:
     - r-survival
     - r-ggplot2 >=2.2.1
+    - r-stats
     - ipython
     - numpy
     - pandas
