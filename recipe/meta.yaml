@@ -12,7 +12,7 @@ source:
     - 0001-Fix-multiprocessing-test.patch
 
 build:
-  number: 0
+  number: 1
   merge_build_host: true  # [win]
   skip: true  # [py2k or r_base=="3.5.1"]
 
