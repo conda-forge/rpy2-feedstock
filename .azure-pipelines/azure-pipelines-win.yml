@@ -8,14 +8,23 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_python3.6.____cpythonr_base3.6:
-        CONFIG: win_python3.6.____cpythonr_base3.6
+      win_64_python3.6.____cpythonr_base3.6:
+        CONFIG: win_64_python3.6.____cpythonr_base3.6
         UPLOAD_PACKAGES: 'True'
-      win_python3.7.____cpythonr_base3.6:
-        CONFIG: win_python3.7.____cpythonr_base3.6
+      win_64_python3.6.____cpythonr_base4.0:
+        CONFIG: win_64_python3.6.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
-      win_python3.8.____cpythonr_base3.6:
-        CONFIG: win_python3.8.____cpythonr_base3.6
+      win_64_python3.7.____cpythonr_base3.6:
+        CONFIG: win_64_python3.7.____cpythonr_base3.6
+        UPLOAD_PACKAGES: 'True'
+      win_64_python3.7.____cpythonr_base4.0:
+        CONFIG: win_64_python3.7.____cpythonr_base4.0
+        UPLOAD_PACKAGES: 'True'
+      win_64_python3.8.____cpythonr_base3.6:
+        CONFIG: win_64_python3.8.____cpythonr_base3.6
+        UPLOAD_PACKAGES: 'True'
+      win_64_python3.8.____cpythonr_base4.0:
+        CONFIG: win_64_python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
     maxParallel: 4
   timeoutInMinutes: 360
