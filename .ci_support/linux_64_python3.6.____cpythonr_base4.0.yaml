@@ -1,11 +1,15 @@
+c_compiler:
+- gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-m2w64_c_compiler:
-- m2w64-toolchain
+docker_image:
+- condaforge/linux-anvil-comp7
 numpy:
-- '1.14'
+- '1.16'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -16,4 +20,6 @@ pin_run_as_build:
 python:
 - 3.6.* *_cpython
 r_base:
-- '3.6'
+- '4.0'
+target_platform:
+- linux-64
