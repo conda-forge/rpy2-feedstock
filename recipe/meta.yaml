@@ -8,13 +8,10 @@ package:
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
   sha256: ce063f3286e717b3914728ad23ec7db0a0f117ba3ade5ada8a250700779f6e77
-  patches:
-    - 0001-Fix-multiprocessing-test.patch
 
 build:
   number: 0
   merge_build_host: true  # [win]
-  skip: true  # [py2k or r_base=="3.5.1"]
 
 requirements:
   build:
@@ -27,17 +24,15 @@ requirements:
     - r-base
     - jinja2
     - pytz
-    - simplegeneric
     - tzlocal
-    - cffi >=1.0.0,!=1.13.0
+    - cffi >=1.10.0,!=1.13.0
   run:
     - python
     - r-base
     - jinja2
     - pytz
-    - simplegeneric
     - tzlocal
-    - cffi >=1.0.0,!=1.13.0
+    - cffi >=1.10.0,!=1.13.0
 
 test:
   source_files:
