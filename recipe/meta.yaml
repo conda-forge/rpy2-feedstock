@@ -38,8 +38,13 @@ test:
   source_files:
     - rpy2/tests
   requires:
-    - r-survival
+    # source https://github.com/rpy2/rpy2/blob/master/scripts/run_tests.sh
     - r-ggplot2 >=2.2.1
+    - r-dplyr
+    - r-tidyr
+    - r-dbplyr
+    - r-lazyeval
+    - r-rlang
     - ipython
     - numpy
     - pandas
