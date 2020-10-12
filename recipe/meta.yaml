@@ -54,7 +54,7 @@ test:
     - rpy2.robjects  # [not win]
     - rpy2.robjects.lib  # [not win]
   commands:
-    - pytest -s -rxs -v rpy2/tests -k "not test_display_args" --timeout=30 --timeout-method=thread  # [not win]
+    - pytest -s -rs -vvv rpy2/tests -k "not test_display_args" --timeout=30 --timeout-method=thread  # [not win]
 
 about:
   home: https://rpy2.bitbucket.io/
