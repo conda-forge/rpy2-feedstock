@@ -45,6 +45,7 @@ test:
     - r-dbplyr
     - r-lazyeval
     - r-rlang
+    - r-survival
     - ipython
     - numpy
     - pandas
