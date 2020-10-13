@@ -60,8 +60,8 @@ test:
     - rpy2.robjects  # [not win]
     - rpy2.robjects.lib  # [not win]
   commands:
-    - pytest -s -rs -vvv rpy2/tests -k "not test_display_args" --timeout=30 --timeout-method=thread  # [not win and r_base != "4.0"]
-    - pytest -s -rs -vvv rpy2/tests -k "not (test_display_args or test_find_onlyfromloadedlibrary)" --timeout=30 --timeout-method=thread  # [not win and r_base == "4.0"]
+    - pytest -s -rs -vvv rpy2/tests -k "not test_display_args" --timeout=100 --timeout-method=thread  # [not win and r_base != "4.0"]
+    - pytest -s -rs -vvv rpy2/tests -k "not (test_display_args or test_find_onlyfromloadedlibrary)" --timeout=100 --timeout-method=thread  # [not win and r_base == "4.0"]
 
 about:
   home: https://rpy2.bitbucket.io/
