@@ -12,7 +12,7 @@ source:
     - 0001-Fix-multiprocessing-test.patch
 
 build:
-  number: 1
+  number: 2
   merge_build_host: true  # [win]
   skip: true  # [py2k or r_base=="3.5.1"]
 
@@ -63,11 +63,12 @@ test:
     - pytest -s -rxs -v rpy2/tests --ignore=rpy2/tests/ipython --ignore rpy2/tests/robjects/lib/test_ggplot2.py --ignore rpy2/tests/robjects/lib/test_grdevices.py --ignore rpy2/tests/robjects/lib/test_grid.py  # [aarch64 or ppc64le]
 
 about:
-  home: https://rpy2.bitbucket.io/
+  home: https://github.com/rpy2/rpy2
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: gpl-2.0.txt
   summary: Python interface to the R language (embedded R)
+  doc_url: https://rpy2.github.io/
 
 extra:
   recipe-maintainers:
