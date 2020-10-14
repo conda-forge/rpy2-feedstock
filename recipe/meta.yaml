@@ -60,7 +60,7 @@ test:
     - rpy2.robjects.lib  # [not win]
   commands:
     - pytest -s -rxs -v rpy2/tests -k "not test_display_args and not test_svg_plotting_args"  # [not (win or aarch64 or ppc64le)]
-    - pytest -s -rxs -v rpy2/tests --ignore=rpy2/tests/ipython  # [aarch64 or ppc64le]
+    - pytest -s -rxs -v rpy2/tests --ignore=rpy2/tests/ipython --ignore rpy2/tests/robjects/lib/test_ggplot2.py --ignore rpy2/tests/robjects/lib/test_grdevices.py --ignore rpy2/tests/robjects/lib/test_grid.py  # [aarch64 or ppc64le]
 
 about:
   home: https://rpy2.bitbucket.io/
