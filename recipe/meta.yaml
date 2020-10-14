@@ -43,7 +43,7 @@ test:
   source_files:
     - rpy2/tests
   requires:
-    - r-cairo
+    - r-cairo  # [not (aarch64 or ppc64le)]
     - r-survival
     - r-ggplot2 >=2.2.1
     - ipython
@@ -59,7 +59,8 @@ test:
     - rpy2.robjects  # [not win]
     - rpy2.robjects.lib  # [not win]
   commands:
-    - pytest -s -rxs -v rpy2/tests -k "not test_display_args and not test_svg_plotting_args"  # [not win]
+    - pytest -s -rxs -v rpy2/tests -k "not test_display_args and not test_svg_plotting_args"  # [not (win or aarch64 or ppc64le)]
+    - pytest -s -rxs -v rpy2/tests --ignore=rpy2/tests/ipython  # [aarch64 or ppc64le]
 
 about:
   home: https://rpy2.bitbucket.io/
