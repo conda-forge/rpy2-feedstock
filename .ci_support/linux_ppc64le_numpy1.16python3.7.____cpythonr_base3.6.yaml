@@ -21,3 +21,8 @@ python:
 - 3.7.* *_cpython
 r_base:
 - '3.6'
+target_platform:
+- linux-ppc64le
+zip_keys:
+- - python
+  - numpy

@@ -26,4 +26,9 @@ pin_run_as_build:
 python:
 - 3.7.* *_cpython
 r_base:
-- '3.6'
+- '4.0'
+target_platform:
+- linux-aarch64
+zip_keys:
+- - python
+  - numpy
