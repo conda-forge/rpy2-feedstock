@@ -424,6 +424,7 @@ Feedstock Maintainers
 
 * [@bgruening](https://github.com/bgruening/)
 * [@ceholden](https://github.com/ceholden/)
+* [@dbast](https://github.com/dbast/)
 * [@johanneskoester](https://github.com/johanneskoester/)
 * [@mingwandroid](https://github.com/mingwandroid/)
 * [@ocefpaf](https://github.com/ocefpaf/)
