@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [r_base == "3.6" and osx-arm64]
   merge_build_host: true  # [win]
 
 requirements:
