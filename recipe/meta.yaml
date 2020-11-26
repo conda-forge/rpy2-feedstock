@@ -11,10 +11,14 @@ source:
 
 build:
   number: 0
+  skip: True  # [r_base == "3.6" and osx and arm64]
   merge_build_host: true  # [win]
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cffi                                   # [build_platform != target_platform]
     - posix  # [win]
     - {{ compiler('c') }}  # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
