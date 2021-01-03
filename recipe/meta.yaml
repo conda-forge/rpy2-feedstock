@@ -1,4 +1,4 @@
-{% set version = "3.3.6" %}
+{% set version = "3.4.1" %}
 {% set pfx = 'm2w64-' if win else '' %}
 
 package:
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: ce063f3286e717b3914728ad23ec7db0a0f117ba3ade5ada8a250700779f6e77
+  sha256: 644360b569656700dfe13f59878ec1cf8c116c128d4f2f0bf96144031f95d2e2
 
 build:
   number: 0
-  skip: True  # [r_base == "3.6" and osx and arm64]
+  skip: true  # [r_base == "3.6" and osx and arm64]
   merge_build_host: true  # [win]
 
 requirements:
