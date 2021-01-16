@@ -32,6 +32,14 @@ jobs:
         CONFIG: linux_64_numpy1.16python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_numpy1.19python3.7.____73_pypyr_base3.6:
+        CONFIG: linux_64_numpy1.19python3.7.____73_pypyr_base3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_numpy1.19python3.7.____73_pypyr_base4.0:
+        CONFIG: linux_64_numpy1.19python3.7.____73_pypyr_base4.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_numpy1.19python3.9.____cpythonr_base3.6:
         CONFIG: linux_64_numpy1.19python3.9.____cpythonr_base3.6
         UPLOAD_PACKAGES: 'True'
