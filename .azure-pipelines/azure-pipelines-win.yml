@@ -8,23 +8,23 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_64_numpy1.16python3.6.____cpythonr_base3.6:
-        CONFIG: win_64_numpy1.16python3.6.____cpythonr_base3.6
+      win_64_numpy1.17python3.6.____cpythonr_base3.6:
+        CONFIG: win_64_numpy1.17python3.6.____cpythonr_base3.6
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.16python3.6.____cpythonr_base4.0:
-        CONFIG: win_64_numpy1.16python3.6.____cpythonr_base4.0
+      win_64_numpy1.17python3.6.____cpythonr_base4.0:
+        CONFIG: win_64_numpy1.17python3.6.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.16python3.7.____cpythonr_base3.6:
-        CONFIG: win_64_numpy1.16python3.7.____cpythonr_base3.6
+      win_64_numpy1.17python3.7.____cpythonr_base3.6:
+        CONFIG: win_64_numpy1.17python3.7.____cpythonr_base3.6
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.16python3.7.____cpythonr_base4.0:
-        CONFIG: win_64_numpy1.16python3.7.____cpythonr_base4.0
+      win_64_numpy1.17python3.7.____cpythonr_base4.0:
+        CONFIG: win_64_numpy1.17python3.7.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.16python3.8.____cpythonr_base3.6:
-        CONFIG: win_64_numpy1.16python3.8.____cpythonr_base3.6
+      win_64_numpy1.17python3.8.____cpythonr_base3.6:
+        CONFIG: win_64_numpy1.17python3.8.____cpythonr_base3.6
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.16python3.8.____cpythonr_base4.0:
-        CONFIG: win_64_numpy1.16python3.8.____cpythonr_base4.0
+      win_64_numpy1.17python3.8.____cpythonr_base4.0:
+        CONFIG: win_64_numpy1.17python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
       win_64_numpy1.19python3.9.____cpythonr_base3.6:
         CONFIG: win_64_numpy1.19python3.9.____cpythonr_base3.6
