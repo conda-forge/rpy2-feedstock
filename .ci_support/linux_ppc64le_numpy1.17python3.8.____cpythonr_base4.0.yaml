@@ -3,15 +3,15 @@ c_compiler:
 c_compiler_version:
 - '9'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-ppc64le
 numpy:
-- '1.16'
+- '1.17'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -22,11 +22,9 @@ pin_run_as_build:
 python:
 - 3.8.* *_cpython
 r_base:
-- '3.6'
+- '4.0'
 target_platform:
-- linux-64
+- linux-ppc64le
 zip_keys:
-- - cdt_name
-  - docker_image
 - - python
   - numpy
