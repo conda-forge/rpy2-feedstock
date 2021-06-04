@@ -1,36 +1,5 @@
 ---
 kind: pipeline
-name: linux_aarch64_numpy1.17python3.6.___h951853483d
-
-platform:
-  os: linux
-  arch: arm64
-
-steps:
-- name: Install and build
-  image: quay.io/condaforge/linux-anvil-aarch64
-  environment:
-    CONFIG: linux_aarch64_numpy1.17python3.6.____cpythonr_base3.6
-    UPLOAD_PACKAGES: True
-    PLATFORM: linux-aarch64
-    BINSTAR_TOKEN:
-      from_secret: BINSTAR_TOKEN
-    FEEDSTOCK_TOKEN:
-      from_secret: FEEDSTOCK_TOKEN
-    STAGING_BINSTAR_TOKEN:
-      from_secret: STAGING_BINSTAR_TOKEN
-  commands:
-    - export FEEDSTOCK_ROOT="$DRONE_WORKSPACE"
-    - export RECIPE_ROOT="$FEEDSTOCK_ROOT/recipe"
-    - export CI=drone
-    - export GIT_BRANCH="$DRONE_BRANCH"
-    - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
-    - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
-    - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
-    - echo "Done building"
-
----
-kind: pipeline
 name: linux_aarch64_numpy1.17python3.6.___h8bc3b11031
 
 platform:
@@ -62,7 +31,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_numpy1.17python3.7.___h53f725a0a4
+name: linux_aarch64_numpy1.17python3.6.___h467e313444
 
 platform:
   os: linux
@@ -72,7 +41,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_numpy1.17python3.7.____cpythonr_base3.6
+    CONFIG: linux_aarch64_numpy1.17python3.6.____cpythonr_base4.1
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -124,7 +93,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_numpy1.17python3.8.___h5c90883fa5
+name: linux_aarch64_numpy1.17python3.7.___h12e3013505
 
 platform:
   os: linux
@@ -134,7 +103,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_numpy1.17python3.8.____cpythonr_base3.6
+    CONFIG: linux_aarch64_numpy1.17python3.7.____cpythonr_base4.1
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -186,7 +155,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_numpy1.19python3.9.___hc6afa7c5ca
+name: linux_aarch64_numpy1.17python3.8.___h1e080dd7fb
 
 platform:
   os: linux
@@ -196,7 +165,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_numpy1.19python3.9.____cpythonr_base3.6
+    CONFIG: linux_aarch64_numpy1.17python3.8.____cpythonr_base4.1
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -228,6 +197,37 @@ steps:
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
     CONFIG: linux_aarch64_numpy1.19python3.9.____cpythonr_base4.0
+    UPLOAD_PACKAGES: True
+    PLATFORM: linux-aarch64
+    BINSTAR_TOKEN:
+      from_secret: BINSTAR_TOKEN
+    FEEDSTOCK_TOKEN:
+      from_secret: FEEDSTOCK_TOKEN
+    STAGING_BINSTAR_TOKEN:
+      from_secret: STAGING_BINSTAR_TOKEN
+  commands:
+    - export FEEDSTOCK_ROOT="$DRONE_WORKSPACE"
+    - export RECIPE_ROOT="$FEEDSTOCK_ROOT/recipe"
+    - export CI=drone
+    - export GIT_BRANCH="$DRONE_BRANCH"
+    - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
+    - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
+    - echo "Done building"
+
+---
+kind: pipeline
+name: linux_aarch64_numpy1.19python3.9.___hd1475db3dc
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: Install and build
+  image: quay.io/condaforge/linux-anvil-aarch64
+  environment:
+    CONFIG: linux_aarch64_numpy1.19python3.9.____cpythonr_base4.1
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
