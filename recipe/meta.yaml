@@ -10,7 +10,7 @@ source:
   sha256: 5d31a5ea43f5a59f6dec30faca87edb01fc9b8affa0beae96a99be923bd7dab3
 
 build:
-  number: 1
+  number: 2
   skip: true  # [r_base == "3.6" and osx and arm64]
   merge_build_host: true  # [win]
 
