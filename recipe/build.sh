@@ -8,6 +8,11 @@ if [ "$(uname)" == "Darwin" ]; then
     export LINKFLAGS="${LDFLAGS}"
 fi
 
+# https://github.com/conda-forge/rpy2-feedstock/issues/79#issuecomment-1000920911
+if [[ "${target_platform}" == "osx-arm64" ]]; then
+  export RPY2_CFFI_MODE="API"
+fi
+
 export LDFLAGS="-Wl,-rpath,$PREFIX/lib/R/lib"
 export LINKFLAGS=""
 
