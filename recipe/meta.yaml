@@ -22,6 +22,7 @@ requirements:
     - posix  # [win]
     - {{ compiler('c') }}  # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
+    - make
   host:
     - python
     - libpython  # [win]
