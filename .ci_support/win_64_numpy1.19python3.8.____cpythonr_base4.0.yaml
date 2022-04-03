@@ -5,7 +5,7 @@ channel_targets:
 m2w64_c_compiler:
 - m2w64-toolchain
 numpy:
-- '1.18'
+- '1.19'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -14,7 +14,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.8.* *_cpython
 r_base:
 - '4.0'
 target_platform:
