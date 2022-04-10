@@ -8,17 +8,17 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_numpy1.18python3.7.____cpythonr_base4.0:
-        CONFIG: osx_64_numpy1.18python3.7.____cpythonr_base4.0
+      osx_64_numpy1.19python3.7.____cpythonr_base4.0:
+        CONFIG: osx_64_numpy1.19python3.7.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_numpy1.18python3.7.____cpythonr_base4.1:
-        CONFIG: osx_64_numpy1.18python3.7.____cpythonr_base4.1
+      osx_64_numpy1.19python3.7.____cpythonr_base4.1:
+        CONFIG: osx_64_numpy1.19python3.7.____cpythonr_base4.1
         UPLOAD_PACKAGES: 'True'
-      osx_64_numpy1.18python3.8.____cpythonr_base4.0:
-        CONFIG: osx_64_numpy1.18python3.8.____cpythonr_base4.0
+      osx_64_numpy1.19python3.8.____cpythonr_base4.0:
+        CONFIG: osx_64_numpy1.19python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_numpy1.18python3.8.____cpythonr_base4.1:
-        CONFIG: osx_64_numpy1.18python3.8.____cpythonr_base4.1
+      osx_64_numpy1.19python3.8.____cpythonr_base4.1:
+        CONFIG: osx_64_numpy1.19python3.8.____cpythonr_base4.1
         UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.19python3.9.____cpythonr_base4.0:
         CONFIG: osx_64_numpy1.19python3.9.____cpythonr_base4.0
