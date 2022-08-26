@@ -5,7 +5,7 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-10.15
+    vmImage: macOS-11
   strategy:
     matrix:
       osx_64_numpy1.19python3.7.____cpythonr_base4.0:
@@ -14,11 +14,23 @@ jobs:
       osx_64_numpy1.19python3.7.____cpythonr_base4.1:
         CONFIG: osx_64_numpy1.19python3.7.____cpythonr_base4.1
         UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.19python3.8.____73_pypyr_base4.0:
+        CONFIG: osx_64_numpy1.19python3.8.____73_pypyr_base4.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.19python3.8.____73_pypyr_base4.1:
+        CONFIG: osx_64_numpy1.19python3.8.____73_pypyr_base4.1
+        UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.19python3.8.____cpythonr_base4.0:
         CONFIG: osx_64_numpy1.19python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.19python3.8.____cpythonr_base4.1:
         CONFIG: osx_64_numpy1.19python3.8.____cpythonr_base4.1
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.19python3.9.____73_pypyr_base4.0:
+        CONFIG: osx_64_numpy1.19python3.9.____73_pypyr_base4.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.19python3.9.____73_pypyr_base4.1:
+        CONFIG: osx_64_numpy1.19python3.9.____73_pypyr_base4.1
         UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.19python3.9.____cpythonr_base4.0:
         CONFIG: osx_64_numpy1.19python3.9.____cpythonr_base4.0
@@ -50,6 +62,7 @@ jobs:
       osx_arm64_numpy1.21python3.10.____cpythonr_base4.1:
         CONFIG: osx_arm64_numpy1.21python3.10.____cpythonr_base4.1
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 14
   timeoutInMinutes: 360
 
   steps:
