@@ -1,11 +1,11 @@
-About rpy2
-==========
+About rpy2-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rpy2-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rpy2/rpy2
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rpy2-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python interface to the R language (embedded R)
 
