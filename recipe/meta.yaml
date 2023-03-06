@@ -32,7 +32,7 @@ requirements:
     - pytz
     - simplegeneric
     - tzlocal
-    - cffi >=1.0.0,!=1.13.0
+    - cffi >=1.10.0,!=1.13.0
   run:
     - python
     - r-base
@@ -40,7 +40,8 @@ requirements:
     - pytz
     - simplegeneric
     - tzlocal
-    - cffi >=1.0.0,!=1.13.0
+    - packaging  # [win]
+    - cffi >=1.10.0,!=1.13.0
 
 test:
   source_files:
