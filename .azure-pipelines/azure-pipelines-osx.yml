@@ -14,11 +14,23 @@ jobs:
       osx_64_numpy1.21python3.10.____cpythonr_base4.3:
         CONFIG: osx_64_numpy1.21python3.10.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.21python3.8.____73_pypyr_base4.2:
+        CONFIG: osx_64_numpy1.21python3.8.____73_pypyr_base4.2
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.21python3.8.____73_pypyr_base4.3:
+        CONFIG: osx_64_numpy1.21python3.8.____73_pypyr_base4.3
+        UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.21python3.8.____cpythonr_base4.2:
         CONFIG: osx_64_numpy1.21python3.8.____cpythonr_base4.2
         UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.21python3.8.____cpythonr_base4.3:
         CONFIG: osx_64_numpy1.21python3.8.____cpythonr_base4.3
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.21python3.9.____73_pypyr_base4.2:
+        CONFIG: osx_64_numpy1.21python3.9.____73_pypyr_base4.2
+        UPLOAD_PACKAGES: 'True'
+      osx_64_numpy1.21python3.9.____73_pypyr_base4.3:
+        CONFIG: osx_64_numpy1.21python3.9.____73_pypyr_base4.3
         UPLOAD_PACKAGES: 'True'
       osx_64_numpy1.21python3.9.____cpythonr_base4.2:
         CONFIG: osx_64_numpy1.21python3.9.____cpythonr_base4.2
@@ -56,6 +68,7 @@ jobs:
       osx_arm64_numpy1.23python3.11.____cpythonr_base4.3:
         CONFIG: osx_arm64_numpy1.23python3.11.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 16
   timeoutInMinutes: 360
 
   steps:
