@@ -24,6 +24,14 @@ jobs:
         CONFIG: linux_64_numpy1.22python3.8.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_numpy1.22python3.9.____73_pypyr_base4.2:
+        CONFIG: linux_64_numpy1.22python3.9.____73_pypyr_base4.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_numpy1.22python3.9.____73_pypyr_base4.3:
+        CONFIG: linux_64_numpy1.22python3.9.____73_pypyr_base4.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_numpy1.22python3.9.____cpythonr_base4.2:
         CONFIG: linux_64_numpy1.22python3.9.____cpythonr_base4.2
         UPLOAD_PACKAGES: 'True'
@@ -62,6 +70,14 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_numpy1.22python3.8.____cpythonr_base4.3:
         CONFIG: linux_aarch64_numpy1.22python3.8.____cpythonr_base4.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_numpy1.22python3.9.____73_pypyr_base4.2:
+        CONFIG: linux_aarch64_numpy1.22python3.9.____73_pypyr_base4.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_numpy1.22python3.9.____73_pypyr_base4.3:
+        CONFIG: linux_aarch64_numpy1.22python3.9.____73_pypyr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_numpy1.22python3.9.____cpythonr_base4.2:
@@ -104,6 +120,14 @@ jobs:
         CONFIG: linux_ppc64le_numpy1.22python3.8.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_numpy1.22python3.9.____73_pypyr_base4.2:
+        CONFIG: linux_ppc64le_numpy1.22python3.9.____73_pypyr_base4.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_numpy1.22python3.9.____73_pypyr_base4.3:
+        CONFIG: linux_ppc64le_numpy1.22python3.9.____73_pypyr_base4.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.2:
         CONFIG: linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.2
         UPLOAD_PACKAGES: 'True'
@@ -128,7 +152,7 @@ jobs:
         CONFIG: linux_ppc64le_numpy1.26python3.12.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-    maxParallel: 27
+    maxParallel: 28
   timeoutInMinutes: 360
 
   steps:
