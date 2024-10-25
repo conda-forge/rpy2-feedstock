@@ -1,5 +1,5 @@
-set DISTUTILS_DEBUG=1
-"%PYTHON%" -c "import setuptools,distutils;print(list(distutils.dist.Distribution()._gen_paths()))"
+set "DISTUTILS_DEBUG=1"
+"%PYTHON%" -c "import setuptools,distutils,logging;logging.basicConfig(level=logging.DEBUG);list(distutils.dist.Distribution().find_config_files())"
 
 "%PYTHON%" -m pip install . --no-deps -vv
 if errorlevel 1 exit 1
