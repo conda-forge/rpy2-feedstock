@@ -47,10 +47,13 @@ test:
     - rpy2/tests
   requires:
     - r-cairo  # [not (aarch64 or ppc64le)]
-    - r-survival
+    - r-dplyr
+    - r-dbplyr
     - r-ggplot2 >=2.2.1
+    - r-lazyeval
+    - r-survival
     - ipython
-    - numpy
+    - numpy<2
     - pandas
     - pytest
   imports:
