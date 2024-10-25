@@ -4,8 +4,8 @@ channel_targets:
 - conda-forge main
 m2w64_c_compiler:
 - m2w64-toolchain
-numpy:
-- '1.23'
+m2w64_c_stdlib:
+- m2w64-toolchain
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,6 +19,3 @@ r_base:
 - '4.1'
 target_platform:
 - win-64
-zip_keys:
-- - python
-  - numpy
