@@ -55,7 +55,7 @@ test:
     - r-lazyeval
     - r-survival
     - ipython
-    - numpy<2
+    - numpy
     - pandas
     - pytest
   imports:
