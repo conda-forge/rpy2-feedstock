@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 0d3e554dac8f4e55a28932f2946341aae3e02894304e1198547222aa86b89e21
+  sha256: 837e2f74583658a5c4c339761a73f9434f33ef9ced3e30c64da7562165c2801b
 
 build:
   number: 4
