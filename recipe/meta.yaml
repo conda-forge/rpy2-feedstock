@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('m2w64_c') }}           # [win]
     - {{ stdlib("m2w64_c") }}             # [win]
     - make
+    - gcc  # [win]
   host:
     - python
     - setuptools
