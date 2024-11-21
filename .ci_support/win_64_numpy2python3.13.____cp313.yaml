@@ -7,7 +7,7 @@ m2w64_c_compiler:
 m2w64_c_stdlib:
 - m2w64-toolchain
 numpy:
-- '1.23'
+- '2'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -16,7 +16,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.13.* *_cp313
 r_base:
 - '4.1'
 target_platform:
