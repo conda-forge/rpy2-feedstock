@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
   sha256: 0d3e554dac8f4e55a28932f2946341aae3e02894304e1198547222aa86b89e21
 
 build:
-  number: 3
+  number: 4
   merge_build_host: true  # [win]
 
 requirements:
@@ -20,7 +20,9 @@ requirements:
     - cffi                                # [build_platform != target_platform]
     - posix                               # [win]
     - {{ compiler('c') }}                 # [not win]
+    - {{ stdlib("c") }}                   # [not win]
     - {{ compiler('m2w64_c') }}           # [win]
+    - {{ stdlib("m2w64_c") }}             # [win]
     - make
   host:
     - python
