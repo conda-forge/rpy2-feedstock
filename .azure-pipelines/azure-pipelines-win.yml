@@ -8,21 +8,37 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_numpy1.22python3.10.____cpython:
-        CONFIG: win_64_numpy1.22python3.10.____cpython
+      win_64_numpy1.22python3.10.____cpythonr_base4.3:
+        CONFIG: win_64_numpy1.22python3.10.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.22python3.9.____cpython:
-        CONFIG: win_64_numpy1.22python3.9.____cpython
+      win_64_numpy1.22python3.10.____cpythonr_base4.4:
+        CONFIG: win_64_numpy1.22python3.10.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.23python3.11.____cpython:
-        CONFIG: win_64_numpy1.23python3.11.____cpython
+      win_64_numpy1.22python3.9.____cpythonr_base4.3:
+        CONFIG: win_64_numpy1.22python3.9.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.26python3.12.____cpython:
-        CONFIG: win_64_numpy1.26python3.12.____cpython
+      win_64_numpy1.22python3.9.____cpythonr_base4.4:
+        CONFIG: win_64_numpy1.22python3.9.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy2python3.13.____cp313:
-        CONFIG: win_64_numpy2python3.13.____cp313
+      win_64_numpy1.23python3.11.____cpythonr_base4.3:
+        CONFIG: win_64_numpy1.23python3.11.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
+      win_64_numpy1.23python3.11.____cpythonr_base4.4:
+        CONFIG: win_64_numpy1.23python3.11.____cpythonr_base4.4
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy1.26python3.12.____cpythonr_base4.3:
+        CONFIG: win_64_numpy1.26python3.12.____cpythonr_base4.3
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy1.26python3.12.____cpythonr_base4.4:
+        CONFIG: win_64_numpy1.26python3.12.____cpythonr_base4.4
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.13.____cp313r_base4.3:
+        CONFIG: win_64_numpy2python3.13.____cp313r_base4.3
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy2python3.13.____cp313r_base4.4:
+        CONFIG: win_64_numpy2python3.13.____cp313r_base4.4
+        UPLOAD_PACKAGES: 'True'
+    maxParallel: 8
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
@@ -36,6 +52,7 @@ jobs:
       displayName: Run Windows build
       env:
         MINIFORGE_HOME: $(MINIFORGE_HOME)
+        CONDA_BLD_PATH: $(CONDA_BLD_PATH)
         PYTHONUNBUFFERED: 1
         CONFIG: $(CONFIG)
         CI: azure
