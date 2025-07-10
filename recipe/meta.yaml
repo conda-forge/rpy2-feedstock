@@ -1,5 +1,5 @@
 {% set version = "3.5.16" %}
-{% set pfx = 'm2w64-' if win else '' %}
+{% set posix = 'm2-' if win else '' %}
 
 package:
   name: rpy2
@@ -17,13 +17,10 @@ requirements:
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cffi                                # [build_platform != target_platform]
-    - m2-base                               # [win]
-    - {{ compiler('c') }}                 # [not win]
-    - {{ stdlib("c") }}                   # [not win]
-    - {{ compiler('m2w64_c') }}           # [win]
-    - {{ stdlib("m2w64_c") }}             # [win]
-    - make
-    - gcc  # [win]
+    - {{ stdlib("c") }}
+    - {{ compiler('c') }}
+    - {{ posix }}make
+    - {{ posix }}base                     # [win]
   host:
     - python
     - setuptools
