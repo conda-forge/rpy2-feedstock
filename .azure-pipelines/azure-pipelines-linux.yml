@@ -8,100 +8,100 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_numpy1.22python3.10.____cpythonr_base4.3:
-        CONFIG: linux_64_numpy1.22python3.10.____cpythonr_base4.3
+      linux_64_python3.10.____cpythonr_base4.3:
+        CONFIG: linux_64_python3.10.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.22python3.10.____cpythonr_base4.4:
-        CONFIG: linux_64_numpy1.22python3.10.____cpythonr_base4.4
+      linux_64_python3.10.____cpythonr_base4.4:
+        CONFIG: linux_64_python3.10.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.22python3.9.____cpythonr_base4.3:
-        CONFIG: linux_64_numpy1.22python3.9.____cpythonr_base4.3
+      linux_64_python3.11.____cpythonr_base4.3:
+        CONFIG: linux_64_python3.11.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.22python3.9.____cpythonr_base4.4:
-        CONFIG: linux_64_numpy1.22python3.9.____cpythonr_base4.4
+      linux_64_python3.11.____cpythonr_base4.4:
+        CONFIG: linux_64_python3.11.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.23python3.11.____cpythonr_base4.3:
-        CONFIG: linux_64_numpy1.23python3.11.____cpythonr_base4.3
+      linux_64_python3.12.____cpythonr_base4.3:
+        CONFIG: linux_64_python3.12.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.23python3.11.____cpythonr_base4.4:
-        CONFIG: linux_64_numpy1.23python3.11.____cpythonr_base4.4
+      linux_64_python3.12.____cpythonr_base4.4:
+        CONFIG: linux_64_python3.12.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.26python3.12.____cpythonr_base4.3:
-        CONFIG: linux_64_numpy1.26python3.12.____cpythonr_base4.3
+      linux_64_python3.9.____cpythonr_base4.3:
+        CONFIG: linux_64_python3.9.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numpy1.26python3.12.____cpythonr_base4.4:
-        CONFIG: linux_64_numpy1.26python3.12.____cpythonr_base4.4
+      linux_64_python3.9.____cpythonr_base4.4:
+        CONFIG: linux_64_python3.9.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.22python3.10.____cpythonr_base4.3:
-        CONFIG: linux_aarch64_numpy1.22python3.10.____cpythonr_base4.3
+      linux_aarch64_python3.10.____cpythonr_base4.3:
+        CONFIG: linux_aarch64_python3.10.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.22python3.10.____cpythonr_base4.4:
-        CONFIG: linux_aarch64_numpy1.22python3.10.____cpythonr_base4.4
+      linux_aarch64_python3.10.____cpythonr_base4.4:
+        CONFIG: linux_aarch64_python3.10.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.22python3.9.____cpythonr_base4.3:
-        CONFIG: linux_aarch64_numpy1.22python3.9.____cpythonr_base4.3
+      linux_aarch64_python3.11.____cpythonr_base4.3:
+        CONFIG: linux_aarch64_python3.11.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.22python3.9.____cpythonr_base4.4:
-        CONFIG: linux_aarch64_numpy1.22python3.9.____cpythonr_base4.4
+      linux_aarch64_python3.11.____cpythonr_base4.4:
+        CONFIG: linux_aarch64_python3.11.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.23python3.11.____cpythonr_base4.3:
-        CONFIG: linux_aarch64_numpy1.23python3.11.____cpythonr_base4.3
+      linux_aarch64_python3.12.____cpythonr_base4.3:
+        CONFIG: linux_aarch64_python3.12.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.23python3.11.____cpythonr_base4.4:
-        CONFIG: linux_aarch64_numpy1.23python3.11.____cpythonr_base4.4
+      linux_aarch64_python3.12.____cpythonr_base4.4:
+        CONFIG: linux_aarch64_python3.12.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.26python3.12.____cpythonr_base4.3:
-        CONFIG: linux_aarch64_numpy1.26python3.12.____cpythonr_base4.3
+      linux_aarch64_python3.9.____cpythonr_base4.3:
+        CONFIG: linux_aarch64_python3.9.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_aarch64_numpy1.26python3.12.____cpythonr_base4.4:
-        CONFIG: linux_aarch64_numpy1.26python3.12.____cpythonr_base4.4
+      linux_aarch64_python3.9.____cpythonr_base4.4:
+        CONFIG: linux_aarch64_python3.9.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.22python3.10.____cpythonr_base4.3:
-        CONFIG: linux_ppc64le_numpy1.22python3.10.____cpythonr_base4.3
+      linux_ppc64le_python3.10.____cpythonr_base4.3:
+        CONFIG: linux_ppc64le_python3.10.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.22python3.10.____cpythonr_base4.4:
-        CONFIG: linux_ppc64le_numpy1.22python3.10.____cpythonr_base4.4
+      linux_ppc64le_python3.10.____cpythonr_base4.4:
+        CONFIG: linux_ppc64le_python3.10.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.3:
-        CONFIG: linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.3
+      linux_ppc64le_python3.11.____cpythonr_base4.3:
+        CONFIG: linux_ppc64le_python3.11.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.4:
-        CONFIG: linux_ppc64le_numpy1.22python3.9.____cpythonr_base4.4
+      linux_ppc64le_python3.11.____cpythonr_base4.4:
+        CONFIG: linux_ppc64le_python3.11.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.23python3.11.____cpythonr_base4.3:
-        CONFIG: linux_ppc64le_numpy1.23python3.11.____cpythonr_base4.3
+      linux_ppc64le_python3.12.____cpythonr_base4.3:
+        CONFIG: linux_ppc64le_python3.12.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.23python3.11.____cpythonr_base4.4:
-        CONFIG: linux_ppc64le_numpy1.23python3.11.____cpythonr_base4.4
+      linux_ppc64le_python3.12.____cpythonr_base4.4:
+        CONFIG: linux_ppc64le_python3.12.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.26python3.12.____cpythonr_base4.3:
-        CONFIG: linux_ppc64le_numpy1.26python3.12.____cpythonr_base4.3
+      linux_ppc64le_python3.9.____cpythonr_base4.3:
+        CONFIG: linux_ppc64le_python3.9.____cpythonr_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_ppc64le_numpy1.26python3.12.____cpythonr_base4.4:
-        CONFIG: linux_ppc64le_numpy1.26python3.12.____cpythonr_base4.4
+      linux_ppc64le_python3.9.____cpythonr_base4.4:
+        CONFIG: linux_ppc64le_python3.9.____cpythonr_base4.4
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
