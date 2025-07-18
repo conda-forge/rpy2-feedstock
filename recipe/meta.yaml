@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  merge_build_host: true  # [win]
 
 requirements:
   build:
