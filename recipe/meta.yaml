@@ -24,6 +24,9 @@ requirements:
     - {{ compiler('m2w64_c') }}           # [win]
     - {{ stdlib("m2w64_c") }}             # [win]
     - make
+    - liblzma-devel                       # [build_platform != target_platform]
+    - zlib                                # [build_platform != target_platform]
+    - libdeflate                          # [build_platform != target_platform]
   host:
     - python
     - libpython  # [win]
@@ -34,6 +37,9 @@ requirements:
     - simplegeneric
     - tzlocal
     - cffi >=1.10.0,!=1.13.0
+    - liblzma-devel                       # [not win]
+    - libdeflate                          # [not win]
+    - zlib                                # [not win]
   run:
     - python
     - r-base
