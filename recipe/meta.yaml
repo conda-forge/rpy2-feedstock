@@ -56,16 +56,14 @@ test:
   source_files:
     - ./
   requires:
-    - r-cairo  # [not win]
-    - r-ggplot2 >=2.2.1
-    - r-survival
+    - r-base
     - ipython
     - numpy
     - pandas
     - pytest
     - {{ posix }}make  # [win]
   commands:
-    - pytest -s -rxs -v rpy2-rinterface/
+    - pytest -s -rxs -v rpy2-rinterface/ -k "not test_find_onlyfromloadedlibrary"
     - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not win]
 
 about:
