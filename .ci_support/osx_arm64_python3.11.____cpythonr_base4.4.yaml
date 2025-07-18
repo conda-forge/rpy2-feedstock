@@ -14,6 +14,10 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+libdeflate:
+- '1.24'
+liblzma_devel:
+- '5'
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
@@ -31,3 +35,5 @@ r_base:
 - '4.4'
 target_platform:
 - osx-arm64
+zlib:
+- '1'
