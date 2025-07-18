@@ -53,7 +53,6 @@ test:
   source_files:
     - rpy2/tests
   requires:
-    - r-cairo  # [not (aarch64 or ppc64le)]
     - r-survival
     - r-ggplot2 >=2.2.1
     - ipython
