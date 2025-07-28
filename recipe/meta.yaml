@@ -1,69 +1,72 @@
-{% set version = "3.5.11" %}
-{% set pfx = 'm2w64-' if win else '' %}
+{% set name = "rpy2" %}
+{% set version = "3.6.1" %}
+{% set posix = 'm2-' if win else '' %}
 
 package:
   name: rpy2
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/rpy2/rpy2-{{ version }}.tar.gz
-  sha256: 0d3e554dac8f4e55a28932f2946341aae3e02894304e1198547222aa86b89e21
+  # the tag on github has the format RELEASE_x_x_x
+  url: https://github.com/rpy2/rpy2/archive/refs/tags/RELEASE_{{ version.replace('.', '_') }}.tar.gz
+  sha256: 241411d196e08f571c72904647018ef242df11ed5cd6c1fdcfcabf3e6ecbc645
 
 build:
-  number: 3
-  merge_build_host: true  # [win]
+  number: 0
+  rpaths:
+    - lib/R/lib/
+    - lib/
+  missing_dso_whitelist:
+    # Conda-build raises the missing `R.dll` linkage erroneously.
+    # xref: https://github.com/conda/conda-build/pull/4786
+    - '*/R.dll'         # [win]
 
 requirements:
   build:
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cffi                                # [build_platform != target_platform]
-    - posix                               # [win]
-    - {{ compiler('c') }}                 # [not win]
-    - {{ compiler('m2w64_c') }}           # [win]
-    - make
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - liblzma-devel                       # [build_platform != target_platform]
+    - zlib                                # [build_platform != target_platform]
+    - libdeflate                          # [build_platform != target_platform]
+    - {{ posix }}make
+    - {{ posix }}base                     # [win]
   host:
     - python
-    - libpython  # [win]
     - pip
-    - r-base
+    - setuptools >=61
     - jinja2
-    - pytz
-    - simplegeneric
     - tzlocal
-    - cffi >=1.10.0,!=1.13.0
+    - r-base
+    - cffi >=1.15.1
+    - liblzma-devel                       # [not win]
+    - libdeflate                          # [not win]
+    - zlib                                # [not win]
   run:
     - python
-    - r-base
     - jinja2
-    - pytz
-    - simplegeneric
     - tzlocal
-    - packaging  # [win]
-    - cffi >=1.10.0,!=1.13.0
+    - r-base
+    - cffi >=1.15.1
+    - packaging
 
 test:
   source_files:
-    - rpy2/tests
+    - ./
   requires:
-    - r-cairo  # [not (aarch64 or ppc64le)]
-    - r-survival
+    - r-cairo  # [not win]
     - r-ggplot2 >=2.2.1
+    - r-survival
     - ipython
     - numpy
     - pandas
     - pytest
-  imports:
-    - rpy2
-    - rpy2.rlike
-    # calls `get_rlib_path` an that only works for *nix
-    - rpy2.ipython       # [not win]
-    - rpy2.rinterface    # [not win]
-    - rpy2.robjects      # [not win]
-    - rpy2.robjects.lib  # [not win]
+    - {{ posix }}make  # [win]
   commands:
-    - pytest -s -rxs -v rpy2/tests -k "not test_display_args and not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not (win or aarch64 or ppc64le)]
-    - pytest -s -rxs -v rpy2/tests --ignore=rpy2/tests/ipython --ignore rpy2/tests/robjects/lib/test_ggplot2.py --ignore rpy2/tests/robjects/lib/test_grdevices.py --ignore rpy2/tests/robjects/lib/test_grid.py -k "not test_POSIXct_datetime_from_timestamp"  # [aarch64 or ppc64le]
+    - pytest -s -rxs -v rpy2-rinterface/
+    - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not win]
 
 about:
   home: https://github.com/rpy2/rpy2

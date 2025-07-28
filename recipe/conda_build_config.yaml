@@ -1,0 +1,6 @@
+c_compiler:                # [win]
+  - gcc                    # [win]
+c_stdlib:                  # [win]
+  - m2w64-sysroot          # [win]
+r_base:
+  - 4.4

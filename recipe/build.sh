@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# https://github.com/conda-forge/rpy2-feedstock/issues/79#issuecomment-1000920911
-if [[ "${target_platform}" == "osx-arm64" ]]; then
-  export RPY2_CFFI_MODE="API"
-fi
+set -euxo pipefail
 
-export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib/R/lib"
-export LINKFLAGS=""
+export CFLAGS="${CFLAGS} -std=c11"
+export LDFLAGS="-L${PREFIX}/lib/R/lib ${LDFLAGS}"
+export CPPFLAGS="-I${PREFIX}/lib/R/include ${CPPFLAGS}"
 
-CFLAGS="-I${PREFIX}/include ${CFLAGS}" "${PYTHON}" -m pip install . --no-deps -vv
+${PYTHON} -m pip install ./rpy2-rinterface/ ./rpy2-robjects/ . -vv
