@@ -78,6 +78,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - flaviomartins
     - conda-forge/r
     - ceholden
     - ocefpaf
