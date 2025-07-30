@@ -369,5 +369,6 @@ Feedstock Maintainers
 
 * [@ceholden](https://github.com/ceholden/)
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
+* [@flaviomartins](https://github.com/flaviomartins/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 

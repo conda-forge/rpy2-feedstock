@@ -14,8 +14,6 @@ channel_targets:
 - conda-forge main
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
-libdeflate:
-- '1.24'
 liblzma_devel:
 - '5'
 numpy:
