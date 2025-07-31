@@ -46,7 +46,6 @@ requirements:
     - python
     - jinja2
     - tzlocal
-    - r-base
     - cffi >=1.15.1
     - packaging
 
