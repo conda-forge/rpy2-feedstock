@@ -36,7 +36,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=61
+    - setuptools >=77
     - jinja2
     - tzlocal
     - r-base
