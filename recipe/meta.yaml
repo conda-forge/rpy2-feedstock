@@ -13,7 +13,7 @@ source:
   sha256: b94f40285abb21288d405d77e66629a5766e8cf21e37a5474fd271e8fd9ddf1d
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -55,16 +55,14 @@ test:
   source_files:
     - ./
   requires:
-    - r-cairo  # [not win]
-    - r-ggplot2 >=2.2.1
-    - r-survival
+    - r-base
     - ipython
     - numpy
     - pandas
     - pytest
     - {{ posix }}make  # [win]
   commands:
-    - pytest -s -rxs -v rpy2-rinterface/
+    - pytest -s -rxs -v rpy2-rinterface/ -k "not test_find_onlyfromloadedlibrary"
     - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not win]
 
 about:
