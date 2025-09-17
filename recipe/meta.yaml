@@ -1,5 +1,5 @@
 {% set name = "rpy2" %}
-{% set version = "3_6_3" %}
+{% set version = "3.6.3" %}
 {% set version_tag = version.replace('.', '_') %}
 {% set posix = 'm2-' if win else '' %}
 
