@@ -1,5 +1,5 @@
 {% set name = "rpy2" %}
-{% set version = "3.6.3" %}
+{% set version = "3_6_4" %}
 {% set version_tag = version.replace('.', '_') %}
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,7 +10,7 @@ package:
 source:
   # the tag on github has the format RELEASE_x_x_x
   url: https://github.com/rpy2/rpy2/archive/refs/tags/RELEASE_{{ version_tag }}.tar.gz
-  sha256: 50050a19bb490cdf9095e133111465956f3f79f41692edeba61fe7fb329ff751
+  sha256: 6442e9fb65dfe4230314ad69db909217f61e984a7f7f892bc7ced31ad743cbd7
 
 build:
   number: 0
