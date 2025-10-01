@@ -5,7 +5,7 @@
 
 package:
   name: rpy2
-  version: {{ version }}
+  version: {{ version.replace('_', '.') }}
 
 source:
   # the tag on github has the format RELEASE_x_x_x
@@ -13,7 +13,7 @@ source:
   sha256: 6442e9fb65dfe4230314ad69db909217f61e984a7f7f892bc7ced31ad743cbd7
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
