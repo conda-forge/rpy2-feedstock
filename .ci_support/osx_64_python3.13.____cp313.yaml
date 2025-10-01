@@ -35,5 +35,8 @@ r_base:
 - '4.4'
 target_platform:
 - osx-64
+zip_keys:
+- - python
+  - channel_sources
 zlib:
 - '1'
