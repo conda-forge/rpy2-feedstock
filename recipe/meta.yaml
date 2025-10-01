@@ -5,7 +5,7 @@
 
 package:
   name: rpy2
-  version: {{ version }}
+  version: {{ version.replace('_', '.') }}
 
 source:
   # the tag on github has the format RELEASE_x_x_x
