@@ -61,7 +61,7 @@ test:
     - ipython
     - numpy
     - pandas
-    - pytest
+    - pytest <9
     - {{ posix }}make  # [win]
   commands:
     - pytest -s -rxs -v rpy2-rinterface/
