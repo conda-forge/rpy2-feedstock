@@ -31,8 +31,5 @@ r_base:
 - '4.5'
 target_platform:
 - linux-ppc64le
-zip_keys:
-- - python
-  - channel_sources
 zlib:
 - '1'
