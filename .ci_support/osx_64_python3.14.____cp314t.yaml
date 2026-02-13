@@ -30,7 +30,7 @@ pin_run_as_build:
 python:
 - 3.14.* *_cp314t
 r_base:
-- '4.5'
+- '4.4'
 target_platform:
 - osx-64
 zlib:
