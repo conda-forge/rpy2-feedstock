@@ -88,7 +88,6 @@ jobs:
         CONFIG: osx_arm64_python3.14.____cp314r_base4.5
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-    maxParallel: 17
   timeoutInMinutes: 360
   variables: {}
 
