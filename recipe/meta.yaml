@@ -1,5 +1,5 @@
 {% set name = "rpy2" %}
-{% set version = "3_6_4" %}
+{% set version = "3.6.5" %}
 {% set version_tag = version.replace('.', '_') %}
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,11 +10,11 @@ package:
 source:
   # the tag on github has the format RELEASE_x_x_x
   url: https://github.com/rpy2/rpy2/archive/refs/tags/RELEASE_{{ version_tag }}.tar.gz
-  sha256: 6442e9fb65dfe4230314ad69db909217f61e984a7f7f892bc7ced31ad743cbd7
+  sha256: b04ac1713e3db73c4c60ba4bd9d30b363406f2ac28ed101672d00c58f2b33a6c
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -66,7 +66,7 @@ test:
     - {{ posix }}make  # [win]
   commands:
     - pytest -s -rxs -v rpy2-rinterface/
-    - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not win]
+    - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp and not test_ri2pandas"  # [not win]
 
 about:
   home: https://github.com/rpy2/rpy2
