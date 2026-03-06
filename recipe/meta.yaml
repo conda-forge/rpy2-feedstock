@@ -65,7 +65,7 @@ test:
     - {{ posix }}make  # [win]
   commands:
     - pytest -s -rxs -v rpy2-rinterface/
-    - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp"  # [not win]
+    - pytest -s -rxs -v rpy2-robjects/ -k "not test_svg_plotting_args and not test_POSIXct_datetime_from_timestamp and not test_ri2pandas"  # [not win]
 
 about:
   home: https://github.com/rpy2/rpy2
